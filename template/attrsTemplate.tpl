@@ -13,6 +13,8 @@
                 {{else ~point(attribute_name_index) == 'MethodParameters' tmpl="attrMethodParametersTemplate"}}
                 {{else ~point(attribute_name_index) == 'Signature'}}
                     <span>signature_index:{{hit signature_index/}}</span><br/>
+		{{else ~point(attribute_name_index) == 'SourceFile'}}
+                    <span>sourcefile_index:{{hit sourcefile_index/}}</span><br/>
                 {{/if}}
             </div>
             {{/for}}

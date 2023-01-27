@@ -479,7 +479,7 @@
         3: {
             'type' : 'Integer',
             'read': function(reader){
-                reader.read('bytes',BC_INT_4);
+                reader.read('bytes',BC_SINT_4);
             },
             'dig' : function(constant,pool){
                 return "(int)"+constant['bytes'];
@@ -658,7 +658,7 @@
         'SourceFile' : {
             'read' : function(reader,length,constantPool){
                 assertLength(length, 2);
-                reader.read("sourcefile_index",BC_INT_2);
+                reader.read("sourcefile_index",BC_INDEX);
             }
         },
         'InnerClasses' : {
